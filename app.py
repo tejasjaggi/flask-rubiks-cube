@@ -7,7 +7,7 @@ app = Flask(__name__)
 def solveCube():  
   cube = request.json['cube']
   print("CUBE ", cube)
-  technique = request.json['technique']
+  technique = "Beginner"
   print("TECHNIQUE ", technique)
   if technique == 'Beginner':
     steps = utils.solve(cube, 'Beginner')
@@ -21,8 +21,8 @@ def solveCube():
 
 @app.route("/")
 def hello():
-  cube = 'yyyywyyyybbbgggobrrrrrrrrgbgggbbbrgooooooobogwwwwywwww'
-  step = utils.solve(str(cube), 'CFOP')
+  cube = 'oobywyywogbbogrgbgrbbyrgogrygwrbwggoryyrobboywowrywrww'
+  step = utils.solve(str(cube), 'Beginner')
   print (step)
   return 'success'
 
