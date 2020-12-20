@@ -68,7 +68,6 @@ pickleshare==0.7.5
 pip-autoremove==0.9.1
 pipenv==2020.6.2
 plac==0.9.6
-pprint==0.1
 preshed==3.0.2
 prometheus-client==0.7.1
 prompt-toolkit==3.0.3

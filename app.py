@@ -6,12 +6,9 @@ app = Flask(__name__)
 @app.route("/solveCube", methods=['POST'])
 def solveCube():  
   cube = request.json['cube']
-  print("CUBE ", cube)
   technique = "Beginner"
-  print("TECHNIQUE ", technique)
   if technique == 'Beginner':
     steps = utils.solve(cube, 'Beginner')
-    print("STEPS ", steps)
   elif technique == "CFOP":
     steps = utils.solve(cube, 'CFOP')
   elif technique == "Kociemba":
@@ -23,7 +20,6 @@ def solveCube():
 def hello():
   cube = 'oobywyywogbbogrgbgrbbyrgogrygwrbwggoryyrobboywowrywrww'
   step = utils.solve(str(cube), 'Beginner')
-  print (step)
   return 'success'
 
 # @app.errorhandler(Exception)
